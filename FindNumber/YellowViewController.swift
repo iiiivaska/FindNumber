@@ -45,4 +45,15 @@ class YellowViewController: UIViewController {
     @IBAction func goToBlueController(_ sender: Any) {
         performSegue(withIdentifier: "goToBlue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goToBlue":
+            if let redVC = segue.destination as? RedViewController {
+                redVC.textForLabel = "Test String"
+            }
+        default:
+            break
+        }
+    }
 }

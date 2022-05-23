@@ -9,9 +9,11 @@ import UIKit
 
 class GreenViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var text = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.text = text
         // Do any additional setup after loading the view.
     }
     
