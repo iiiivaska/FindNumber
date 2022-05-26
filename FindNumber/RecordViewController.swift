@@ -21,4 +21,7 @@ class RecordViewController: UIViewController {
         }
     }
     
+    @IBAction func closeVc(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

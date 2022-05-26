@@ -46,7 +46,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GKo-qY-edE" kind="presentation" id="shU-JU-I2H"/>
+                                            <segue destination="ZuA-nh-Lzx" kind="presentation" modalPresentationStyle="fullScreen" id="shU-JU-I2H"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -521,6 +521,7 @@
                         <outletCollection property="buttons" destination="EhR-95-4Xp" collectionClass="NSMutableArray" id="CPl-wZ-htM"/>
                         <outletCollection property="buttons" destination="RtE-pC-Mra" collectionClass="NSMutableArray" id="3F1-Ko-KgQ"/>
                         <outletCollection property="buttons" destination="fqr-RI-qnH" collectionClass="NSMutableArray" id="AEb-uj-BVX"/>
+                        <segue destination="ZuA-nh-Lzx" kind="presentation" identifier="recordVC" modalPresentationStyle="fullScreen" id="Uim-3r-xHi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4e-Jm-2O0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,11 +533,11 @@
             <objects>
                 <viewController id="GKo-qY-edE" customClass="RecordViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggO-YI-EW3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5A-5j-AUJ">
-                                <rect key="frame" x="160" y="397" width="94" height="48"/>
+                                <rect key="frame" x="160" y="424" width="94" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -549,14 +550,20 @@
                             <constraint firstItem="s5A-5j-AUJ" firstAttribute="centerY" secondItem="ggO-YI-EW3" secondAttribute="centerY" id="aMH-hL-78e"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Рекорд" id="zUn-KB-sii"/>
+                    <navigationItem key="navigationItem" title="Рекорд" id="zUn-KB-sii">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="XkS-Gk-LN0">
+                            <connections>
+                                <action selector="closeVc:" destination="GKo-qY-edE" id="fFQ-W6-CcV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordLabel" destination="s5A-5j-AUJ" id="yU9-LM-oRC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wS-gz-FJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-643" y="900"/>
+            <point key="canvasLocation" x="266.66666666666669" y="900"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e0b-y1-AtP">
@@ -576,7 +583,28 @@
             </objects>
             <point key="canvasLocation" x="-2500" y="108"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NML-sd-ggt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZuA-nh-Lzx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qq-gN-0ta">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GKo-qY-edE" kind="relationship" relationship="rootViewController" id="11L-eS-V7N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auK-hf-j5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-643.47826086956525" y="900"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uim-3r-xHi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
