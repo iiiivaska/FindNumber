@@ -36,6 +36,7 @@ class SettingsTableViewController: UITableViewController {
             return
         }
     }
+    
     @IBAction func changeTimerState(_ sender: UISwitch) {
         Settings.shared.currentSettings.timeState = sender.isOn
     }

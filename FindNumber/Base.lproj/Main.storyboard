@@ -46,7 +46,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GKo-qY-edE" kind="show" id="shU-JU-I2H"/>
+                                            <segue destination="GKo-qY-edE" kind="presentation" id="shU-JU-I2H"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -530,14 +530,29 @@
         <!--Рекорд-->
         <scene sceneID="zwm-Za-EeZ">
             <objects>
-                <viewController id="GKo-qY-edE" sceneMemberID="viewController">
+                <viewController id="GKo-qY-edE" customClass="RecordViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggO-YI-EW3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5A-5j-AUJ">
+                                <rect key="frame" x="160" y="397" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4C7-Nf-X2q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s5A-5j-AUJ" firstAttribute="centerX" secondItem="ggO-YI-EW3" secondAttribute="centerX" id="S7p-6C-C0N"/>
+                            <constraint firstItem="s5A-5j-AUJ" firstAttribute="centerY" secondItem="ggO-YI-EW3" secondAttribute="centerY" id="aMH-hL-78e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рекорд" id="zUn-KB-sii"/>
+                    <connections>
+                        <outlet property="recordLabel" destination="s5A-5j-AUJ" id="yU9-LM-oRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wS-gz-FJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

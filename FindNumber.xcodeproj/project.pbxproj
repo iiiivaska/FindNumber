@@ -20,6 +20,7 @@
 		A8BA486E283CE5A200670B00 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA486D283CE5A200670B00 /* SelectTimeViewController.swift */; };
 		A8BA4870283CE5C500670B00 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA486F283CE5C500670B00 /* SettingsTableViewController.swift */; };
 		A8BA48CC283F97D900670B00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA48CB283F97D900670B00 /* Settings.swift */; };
+		A8BA48CE283FB5E800670B00 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA48CD283FB5E800670B00 /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A8BA486D283CE5A200670B00 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		A8BA486F283CE5C500670B00 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		A8BA48CB283F97D900670B00 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A8BA48CD283FB5E800670B00 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				A8BA486D283CE5A200670B00 /* SelectTimeViewController.swift */,
 				A8BA486F283CE5C500670B00 /* SettingsTableViewController.swift */,
 				A8BA48CB283F97D900670B00 /* Settings.swift */,
+				A8BA48CD283FB5E800670B00 /* RecordViewController.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				A840C8EB283B9C6200C9A720 /* AppDelegate.swift in Sources */,
 				A840C91B283BB3C700C9A720 /* GameViewController.swift in Sources */,
 				A840C8ED283B9C6200C9A720 /* SceneDelegate.swift in Sources */,
+				A8BA48CE283FB5E800670B00 /* RecordViewController.swift in Sources */,
 				A840C91D283BD47D00C9A720 /* Game.swift in Sources */,
 				A8BA48CC283F97D900670B00 /* Settings.swift in Sources */,
 				A8BA486E283CE5A200670B00 /* SelectTimeViewController.swift in Sources */,
@@ -473,7 +477,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -504,7 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
