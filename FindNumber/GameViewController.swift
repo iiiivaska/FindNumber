@@ -15,14 +15,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
-    lazy var game = Game(countItems: buttons.count, time: 45) { [weak self] (status, time) in
+    lazy var game = Game(countItems: buttons.count) { [weak self] (status, time) in
         self?.timerLabel.text = "\(time.secondsToString())"
         self?.updateInfoGame(with: status)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if !Settings.shared.currentSettings.timeState {
+            timerLabel.isHidden = true
+        }
         setupScreen()
     }
     
@@ -84,5 +86,10 @@ class GameViewController: UIViewController {
             statusLabel.textColor = .red
             newGameButton.isHidden = false
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
     }
 }
